@@ -1,0 +1,23 @@
+<h1>OpenIdProvider</h1>
+<%= form_tag do %>
+  <div>
+    <label for="user_name">User Name (required)</label>
+    <input id="user_name" name="user_name" required="required" type="text" value="user">
+  </div>
+  <div>
+    <label for="password">Client ID (required)</label>
+    <input id="password" name="password" required="required" type="password" value="password">
+  </div>
+
+  <input id="redirectUri" name="redirectUri" type="hidden" value="<%= params['redirectUri'] %>">
+  <input id="clientId" name="clientId" type="hidden" value="<%= params['clientId'] %>">
+  <input id="scopes" name="scopes" type="hidden" value="<%= params['scopes'] %>">
+  <input id="state" name="state" type="hidden" value="<%= params['state'] %>">
+  <input id="nonce" name="nonce" type="hidden" value="<%= params['nonce'] %>">
+  <input id="responseType-code" name="responseType-code" type="hidden" value="<%= params['responseType-code'] %>">
+  <input id="responseType-token" name="responseType-token" type="hidden" value="<%= params['responseType-token'] %>">
+  <input id="responseType-id_token" name="responseType-id_token" type="hidden" value="<%= params['responseType-id_token'] %>">
+  <input id="responseMode" name="responseMode" type="hidden" value="<%= params['responseMode'] %>">
+
+  <input type="submit" value="Log in">
+<% end %>

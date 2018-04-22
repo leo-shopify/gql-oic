@@ -1,0 +1,58 @@
+<h1>RelyingParty#index</h1>
+<form action="//localhost:8000">
+  <div>
+    <label for="redirectUri">Redirect URI (required)</label>
+    <code>http://localhost:9000</code>
+    <input id="redirectUri" name="redirectUri" required type="text" value="<%= rp_path %>">
+  </div>
+  <div>
+    <label for="clientId">Client ID (required)</label>
+    <input id="clientId" name="clientId" required type="text" value="client-id-1">
+  </div>
+  <div>
+    <label for="scopes">Scope (required)</label>
+    <input id="scopes" name="scopes" required type="text" value="openid">
+  </div>
+  <div>
+    <label for="state">State</label>
+    <input id="state" name="state" type="text" value="state">
+  </div>
+  <div>
+    <label for="nonce">Nonce</label>
+    <input id="nonce" name="nonce" type="text" value="random-nonce">
+  </div>
+
+  <section>
+    <h2>Response type (required)</h2>
+    <div>
+      <input id="responseType-code" name="responseType-code" required type="checkbox" value="code" checked>
+      <label for="responseType-code">code</label>
+    </div>
+    <div>
+      <input id="responseType-token" name="responseType-token" type="checkbox" value="token">
+      <label for="responseType-token">token</label>
+    </div>
+    <div>
+      <input id="responseType-id_token" name="responseType-id_token" type="checkbox" value="id_token">
+      <label for="responseType-id_token">id_token</label>
+    </div>
+  </section>
+
+  <section>
+    <h2>Response mode (required)</h2>
+    <div>
+      <input id="responseMode-query" name="responseMode" type="radio" value="query" checked required>
+      <label for="responseMode-query">query</label>
+    </div>
+    <div>
+      <input id="responseMode-formPost" name="responseMode" type="radio" value="form_post">
+      <label for="responseMode-formPost">form_post</label>
+    </div>
+    <div>
+      <input id="responseMode-fragment" name="responseMode" type="radio" value="fragment">
+      <label for="responseMode-fragment">fragment</label>
+    </div>
+  </section>
+
+  <input type="submit" value="Send Request">
+</form>
